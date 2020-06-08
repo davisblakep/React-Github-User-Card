@@ -7,31 +7,24 @@ class UserSearchForm extends React.Component{
     constructor(){
     super();
         this.state = {
-            name: "",
+
         }
     }
 
-    inputChange = (e) => {
-        this.setState({ [e.target.name]: e.target.value})
-    }
-
-    onSubmit = (e) => {
-        e.preventDefault();
-        this.setState({ name: "" })
-    }
-
+    
 
     render(){
+        console.log("User search form props", this.props)
         return(
-            <div>
-                <form onSubmit={this.onSubmit} style={{paddingTop: "4%"}}>
+            <div style={{textAlign: "center"}}>
+                <form onSubmit={this.props.onSubmit} style={{paddingTop: "4%"}}>
                     <Input 
                         type="text"
                         label="User Search"
                         name="name"
                         placeholder="Github Username"
-                        value={this.state.name}
-                        onChange={this.inputChange}
+                        value={this.props.userSearch}
+                        onChange={this.props.inputChange}
                         required
                     />
                     <Button type="submit" variant="outlined" style={{marginLeft: "4%"}}>Search</Button>
