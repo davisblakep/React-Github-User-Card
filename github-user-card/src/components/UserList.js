@@ -10,12 +10,12 @@ const UserList = (props) => {
 
 
     return(
-        <div>
-            <Grid container display='flex' justify='space-evenly' align='center'>
+        <div style={{marginTop: "4%"}}>
+            <Grid container spacing={6} display='flex' justify='space-evenly' align='center'>
             {props.followerList.data === undefined ? <p>Hold yer' hoarses</p> : props.followerList.data.map(
                 users => {
                     return(
-                        <Grid item xs={3}>
+                        <Grid item xs>
                         <UserCard data={users} key={users.id} />
                         </Grid>
                     )

@@ -14,7 +14,7 @@ const useStyles = makeStyles({
     maxWidth: 345,
   },
   media: {
-    height: 140,
+    height: 260,
   },
 });
 
@@ -35,8 +35,7 @@ export default function UserCard(props) {
             {props.data.login}
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-            across all continents except Antarctica
+            User Data From API Coming Soon!
           </Typography>
         </CardContent>
       </CardActionArea>
